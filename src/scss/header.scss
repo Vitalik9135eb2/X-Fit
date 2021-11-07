@@ -2,4 +2,113 @@
 @import './assets/vars';
 
 
+.header{
+    position: relative;
+    @include flex(flex,column,center,center);
+    &__top{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+    &__top-inner{
+        margin: 0 auto;
+        max-width: 1510px;
+        padding: 10px 15px;
+        @include flex(flex,row,space-between,center);
+    }
+    &__burger-btn{
+        background-color: inherit;
+    }
+    &__logo{
+        width: 140px;
+        height: 70px;
+    }
+    &__logo-img{
+        width: 100%;
+        height: 100%;
+    }
+    &__tell{
+        font-size: 32px;
+        color: $acentOlimpicColor;
+        font-weight: bold;
+    }
+    &__content{
+        @include flex(flex,column,center,center);
+    }
+    &__content-inner{
+        padding: 0 20px;
+        @include flex(flex,column,center,center);
+        max-width: 340px
+    }
+    &__content-title{
+        @include text(40px,bold,40px,$textColor);
+    }
+    &__content-subtitle{
+        display: block;
+        padding-top: 16px;
+        @include text(18px,lighter,18px,$textColor);
+        align-self: flex-start;
+    }
+    &__content-text{
+        padding-top: 40px;
+        max-width: 288px;
+        @include text(24px,lighter,36px,$textColor);
+        margin-bottom: 30px;
+    }
+    &__content-btn{
+        margin: 30px 0;
+        font-family: 'Calibri';
+        @include text(18px,lighter,18px,$textColor);
+        border-radius: 8px;
+        transform: skew(-14deg);
+        padding: 14px 57px;
+        background: inherit;
+    }
+    &__extend-btn{
+        background-color: inherit;
+        transform: translateY(-140px);
+    }
+    &__extend-arrow{
+        transform: rotate(90deg);
+    }
+}
 
+
+.olimpic{
+    padding: 160px 0 90px 0;
+    background-image: url('./../img/header/bg-olimpic.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0%, 100% 94%, 0% 100%);
+
+    &__text{
+        color: $acentOlimpicColor;
+    }
+    &__btn{
+        border: 1px solid $acentOlimpicColor;
+    }
+}
+.futurist{
+    padding: 110px 0 225px 0;
+    background-image: url('./../img/header/bg-futurist.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    position: relative;
+    clip-path: polygon(0 6%, 100% 0%, 100% 94%, 0% 100%);
+    margin-top: -53px;
+    &__text{
+        color: $acentFuturistColor;
+        display: block;
+    }
+
+    &__btn{
+        border: 1px solid $acentFuturistColor;
+    }
+}

@@ -2,6 +2,33 @@
 @import './assets/vars';
 @import './assets/global.scss';
 
+@font-face {
+    font-family: 'Calibri';
+    src: url('./../fonts/Calibri-Light.woff');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'DinDisplayPro';
+    src: url('./../fonts/PFDinDisplayPro-BoldItalic.woff');
+    font-style: italic;
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'DinDisplayPro';
+    src: url('./../fonts/PFDinDisplayPro-LightItalic.woff');
+    font-style: italic;
+    font-weight: lighter;
+}
 
+
+.btn--green{
+    background-color: $acentOlimpicColor !important;
+    box-shadow: 2px 4px 12px 0px $acentOlimpicColor !important;
+}
+.btn--orange{
+    background-color: $acentFuturistColor !important;
+    box-shadow: 2px 4px 12px 0px $acentFuturistColor !important;
+}
 
 @import './header.scss';
+@import './services.scss';

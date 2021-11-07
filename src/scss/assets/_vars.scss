@@ -1,27 +1,31 @@
 
 
-$acentColor: #FD665E;
+$acentOlimpicColor: #7AB929;
+$acentFuturistColor: #FA681B;
+$textColor: #fff;
+
+
 $primaryColor: #FFF;
 $secondaryColor: #C7C7C7;
-$textColor: #000;
+
 $textColorLight: #585858;
 $linkColor: #5286EC;
 
 
 
 
-%container{
-    padding: 0 15px;
-    margin: 0 auto;
-    width: 1315px;
-    @media screen and (max-width: 1600px) {
-        width: 1200px;
-    }
-    @media screen and (max-width: 1400px) {
-        width: 980px;
-    }
-    @media screen and (max-width: 1200px) {
-        width: 800px;
-    }
+// %container{
+//     padding: 0 15px;
+//     margin: 0 auto;
+//     width: 1315px;
+//     @media screen and (max-width: 1600px) {
+//         width: 1200px;
+//     }
+//     @media screen and (max-width: 1400px) {
+//         width: 980px;
+//     }
+//     @media screen and (max-width: 1200px) {
+//         width: 800px;
+//     }
 
-}
+// }

@@ -1,0 +1,74 @@
+@import './assets/mixins';
+@import './assets/vars';
+
+
+.services{
+    background-image: url('./../img/services/bg-services.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 6%, 100% 0%, 100% 94%, 0% 100%);
+
+    &__inner{
+        @include flex (flex,column,center,center);
+    }
+    &__nav{
+        @include flex (flex,column,center,center);
+        
+    }
+    &__nav-item{
+        position: relative;
+        height: 76px;
+        cursor: pointer;
+    }
+    &__nav-item::before{
+        position: absolute;
+        content: "";
+    }
+    &__nav-item:nth-child(1)::before{
+        background-image: url('./../img/services/icon-gum.svg');
+        background-repeat: no-repeat;
+        background-size:100%;
+        width: 40px;
+        height: 40px;
+        top: 0;
+        left: 0;
+        background-color:lightcoral;
+        padding: 10px;
+    }
+    &__nav-item:nth-child(2)::before{
+        background-image: url('./../img/services/icon-group.svg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        width: 40px;
+        height: 40px;
+        top: 0;
+        left: 0;
+    }
+    &__nav-item:nth-child(3)::before{
+        background-image: url('./../img/services/icon-shape.png');
+        background-repeat: no-repeat;
+        background-size:cover;
+        width: 40px;
+        height: 40px;
+        top: 0;
+        left: 0;
+    }
+    &__nav-item:nth-child(4)::before{
+        background-image: url('./../img/services/icon-cildren.svg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        width: 40px;
+        height: 40px;
+        top: 0;
+        left: 0;
+    }
+
+
+    &__content{
+        display: none;
+    }
+    &__content.active{
+        display: block;
+    }
+    
+}

@@ -11,58 +11,100 @@
 
 <body>
     <header class="header">
+
         <div class="header__top">
-            <button class="header__burger-btn">
-                <img src="" alt="" class="header__burger-img">
-            </button>
-            <a href="" class="header__logo">
-                <img src="" alt="" class="header__logo-img">
-            </a>
-            <a href="" class="header__tell"></a>
+            <div class="header__top-inner">
+                <button class="header__burger-btn">
+                    <img src="./img/header/burger.png" alt="menu button" class="header__burger-img">
+                </button>
+                <a href="#" class="header__logo">
+                    <img src="./img/header/logo.svg" alt="Logo: X-Fit" class="header__logo-img">
+                </a>
+                <a href="tel: 7347" class="header__tell">7347</a>
+            </div>
         </div>
 
         <div class="header__content olimpic">
-            <h2 class="hedader__content-title"></h2>
-            <span class="header__content-subtitle"></span>
-            <p class="header__content-text olimpic__text"></p>
-            <button class="header__content-btn olimpic__btn btn--green"></button>
-            <button class="header__content-btn olimpic__btn"></button>
+            <div class="header__content-inner">
+                <h2 class="header__content-title">ОЛИМПИК АРЕНА</h2>
+                <span class="header__content-subtitle">ЛЕБЯЖИЙ, УЛ.РАТОМСКАЯ 2</span>
+                <p class="header__content-text ">
+                    / Фитнес-клуб с бассейном /
+                    Первые <span class="olimpic__text">100</span> клубных карт со скидкой / 
+                    <span class="olimpic__text">50%</span>/
+                </p>
+                <button class="header__content-btn olimpic__btn btn--green">Забрать карту</button>
+                <button class="header__content-btn olimpic__btn">Подробнее</button>
+            </div>
         </div>
 
         <div class="header__content futurist">
-            <h2 class="hedader__content-title"></h2>
-            <span class="header__content-subtitle"></span>
-            <p class="header__content-text futurist__text"></p>
-            <button class="header__content-btn futurist__btn btn--orange"></button>
-            <button class="header__content-btn futurist__btn"></button>
+            <div class="header__content-inner" >
+                <h2 class="header__content-title">БЦ ФУТУРИС</h2>
+                <span class="header__content-subtitle">УРУЧЬЕ, ПР.НЕЗАВИСИМОСТИ 173</span>
+                <p class="header__content-text ">
+                    Фитнес клуб с бассейном и детской комнатой /
+                    Купи безлимитную карту и получи вторую <span class="futurist__text">/ в подарок /</span> 
+                </p>
+                <button class="header__content-btn futurist__btn btn--orange">Забрать карту</button>
+                <button class="header__content-btn futurist__btn">Подробнее</button>
+            </div>
         </div>
 
         <button class="header__extend-btn">
-            <img src="" alt="arrow" class="header__extend-arrow">
+            <img src="./img/header/btn-reserve.png" alt="arrow" class="header__extend-arrow">
         </button>
+
+
     </header>
 
     <section class="services">
         <div class="services__inner">
-            <ul class="servicet__nav">
-                <li class="services__nav-item">
-                    <a href="" class="services__nav-link"></a>
+            <ul class="services__nav">
+                <li class="services__nav-item " id="#gum">
+                    Тренажерный зал
                 </li>
-
-                <li class="services__nav-item">
-                    <a href="" class="services__nav-link"></a>
+                <li class="services__nav-item" id="#grup">
+                    Групповые занятия
                 </li>
-                <li class="services__nav-item">
-                    <a href="" class="services__nav-link"></a>
+                <li class="services__nav-item" id="#martial-arts">
+                    Зал единоборств
                 </li>
-                <li class="services__nav-item">
-                    <a href="" class="services__nav-link"></a>
+                <li class="services__nav-item" id="#children">
+                    Детский фитнес
                 </li>
             </ul>
 
-            <div class="services__content gum">
+            <div class="services__content" id="gum">
                 <div class="services__content-wrap">
+                    <img src="" alt="1" class="services__content-img">
                     <img src="" alt="" class="services__content-img">
+                    <img src="" alt="" class="services__content-img">
+                    <img src="" alt="" class="services__content-img">
+                </div>
+                <img src="" alt="" class="gum__img">
+            </div>
+            <div class="services__content" id="grup">
+                <div class="services__content-wrap">
+                    <img src="" alt="2" class="services__content-img">
+                    <img src="" alt="" class="services__content-img">
+                    <img src="" alt="" class="services__content-img">
+                    <img src="" alt="" class="services__content-img">
+                </div>
+                <img src="" alt="" class="gum__img">
+            </div>
+            <div class="services__content" id="martial-arts">
+                <div class="services__content-wrap">
+                    <img src="" alt="4" class="services__content-img">
+                    <img src="" alt="" class="services__content-img">
+                    <img src="" alt="" class="services__content-img">
+                    <img src="" alt="" class="services__content-img">
+                </div>
+                <img src="" alt="" class="gum__img">
+            </div>
+            <div class="services__content" id="children">
+                <div class="services__content-wrap">
+                    <img src="" alt="3" class="services__content-img">
                     <img src="" alt="" class="services__content-img">
                     <img src="" alt="" class="services__content-img">
                     <img src="" alt="" class="services__content-img">
@@ -183,7 +225,7 @@
     <section class="graph"></section>
 
     <section class="about">
-        
+
     </section>
 
     <script src="./js/main.min.js"> </script>
