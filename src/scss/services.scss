@@ -6,69 +6,91 @@
     background-image: url('./../img/services/bg-services.png');
     background-repeat: no-repeat;
     background-size: cover;
-    clip-path: polygon(0 6%, 100% 0%, 100% 94%, 0% 100%);
+    clip-path: polygon(0 12%, 100% 0%, 100% 94%, 0% 100%);
+    overflow: hidden;
+    margin-top: -100px;
+    
 
     &__inner{
         @include flex (flex,column,center,center);
-    }
-    &__nav{
-        @include flex (flex,column,center,center);
+        padding-top: 200px;
+        transform: skewX(-12deg);
+        width: 300px;
+        margin: 0 auto;
         
     }
+    &__nav{
+        padding-top: 60px;
+        @include flex (flex,column,center,center);
+        width: 100%;
+        height: 150px;
+        transform: translateX(-10px);
+    }
     &__nav-item{
-        position: relative;
-        height: 76px;
         cursor: pointer;
+        width: 100%;
+        position: relative;
     }
-    &__nav-item::before{
+    &__nav-item:nth-child(2){
+        transform: translateY(-78px);
+    }
+    &__nav-item:nth-child(3){
+        transform: translateY(-158px);
+    }
+    &__nav-item:nth-child(4){
+        transform: translateY(-237px);
+    }
+    &__nav-wrap{
+        width: 75px;
+        height: 75px;
+        background-color: $acentOlimpicColor;
+        overflow: hidden;
+        display: inline-block;
         position: absolute;
-        content: "";
+        top: -74px;
+        left: 0;
+        @include flex (flex,column,center,center);
     }
-    &__nav-item:nth-child(1)::before{
-        background-image: url('./../img/services/icon-gum.svg');
-        background-repeat: no-repeat;
-        background-size:100%;
+    &__nav-item:nth-child(2)  &__nav-wrap{
+        left: 74px;
+        top: -75px;
+    }
+    &__nav-item:nth-child(3)  &__nav-wrap{
+        left: 148px;
+    }
+    &__nav-item:nth-child(4)  &__nav-wrap{
+        left: 222px;
+    }
+    &__nav-wrap.active{
+        background-color: #000;
+    }
+    &__nav-img{
         width: 40px;
         height: 40px;
-        top: 0;
-        left: 0;
-        background-color:lightcoral;
-        padding: 10px;
+        transform: skewX(12deg);
     }
-    &__nav-item:nth-child(2)::before{
-        background-image: url('./../img/services/icon-group.svg');
-        background-repeat: no-repeat;
-        background-size:cover;
-        width: 40px;
-        height: 40px;
-        top: 0;
-        left: 0;
+    &__nav-text{
+        display: block;
+        // transform: skewX(-6deg);
+        @include text(24px,bold,29px,$textColor);
+        background-color: #000;
+        padding: 25px 0 25px 40px;
+        text-transform: uppercase;
+        opacity: 0;
     }
-    &__nav-item:nth-child(3)::before{
-        background-image: url('./../img/services/icon-shape.png');
-        background-repeat: no-repeat;
-        background-size:cover;
-        width: 40px;
-        height: 40px;
-        top: 0;
-        left: 0;
+    &__nav-text.active{
+        opacity: 1;
     }
-    &__nav-item:nth-child(4)::before{
-        background-image: url('./../img/services/icon-cildren.svg');
-        background-repeat: no-repeat;
-        background-size:cover;
-        width: 40px;
-        height: 40px;
-        top: 0;
-        left: 0;
-    }
-
 
     &__content{
         display: none;
     }
     &__content.active{
         display: block;
+        transform: skewX(12deg);
+        width: 100%;
     }
-    
+    &__content-wrap{
+        @include flex (flex,column,center,center)
+    }
 }
