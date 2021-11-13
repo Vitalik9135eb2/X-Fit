@@ -1,0 +1,8 @@
+@import './assets/mixins';
+@import './assets/vars';
+
+.info{
+    background-image: url('./../img/header/bg-olimpic.png');
+    background-size:cover;
+    clip-path: polygon(0 3%, 100% 0%, 100% 98%, 0% 100%);
+}
