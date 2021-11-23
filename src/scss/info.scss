@@ -4,5 +4,70 @@
 .info{
     background-image: url('./../img/header/bg-olimpic.png');
     background-size:cover;
-    clip-path: polygon(0 3%, 100% 0%, 100% 98%, 0% 100%);
+    clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
+    transform: translateY(-24px);
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "";
+        background-color: $acentFuturistColor;
+        width: 100%;
+        height: 20px;
+        top: 9px;
+        left: 0;
+        clip-path: polygon(0 0, 100% 25%, 100% 28%, 0 65%);
+        transform: rotate(-5deg)
+    }
+
+    &__inner{
+        padding-top: 75px;
+        @include flex (flex,column,center,center);
+    }
+    &__title{
+        @include text(32px,700,38px,$textColor);
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        max-width: 285px;
+        &::before{
+            position: absolute;
+            content: "/";
+            top: 0;
+            left: -5px;
+            color: $acentFuturistColor;
+        }
+    }
+    &__content{
+        margin-top: 42px;
+        @include flex (flex,column,center,center);
+    }
+
+    &__text-wrap{
+        max-width: 290px
+    }
+    &__text{
+        @include text(18px,500,32px,$textColor);
+        margin-top: 5px;
+        text-transform: uppercase;
+    }
+    &__text-span{
+        font-weight: 700;
+    }
+    &__item{
+        margin-top: 65px;
+        @include flex (flex,column,center,center);
+    }
+    &__item-text{
+        @include text(32px,400,38px,$textColor);
+        text-transform: uppercase;
+        max-width: 290px;
+    }
+    &__item-btn{
+        margin-top: 65px;
+        margin-bottom: 130px;
+        padding: 15px 60px;
+        @include text(18px,400,20px,$textColor);
+        transform: skew(-12deg);
+        border-radius: 8px;
+    }
 }

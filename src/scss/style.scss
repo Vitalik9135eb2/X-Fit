@@ -20,17 +20,30 @@
     font-weight: lighter;
 }
 
+.container{
+    margin: 0 auto;
+}
 
+.text--green{
+    color: $acentOlimpicColor;
+}
+.text--orange{
+    color: $acentFuturistColor;
+}
 .btn--green{
     background-color: $acentOlimpicColor !important;
     box-shadow: 2px 4px 12px 0px $acentOlimpicColor !important;
+    transform: skew(-12deg) !important;
 }
 .btn--orange{
     background-color: $acentFuturistColor !important;
     box-shadow: 2px 4px 12px 0px $acentFuturistColor !important;
+    transform: skew(-12deg) !important;
 }
 
 @import './header.scss';
 @import './services.scss';
 @import './card.scss';
 @import './info.scss';
+@import './freebie.scss';
+@import './graph.scss'

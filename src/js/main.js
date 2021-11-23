@@ -45,7 +45,7 @@ const contentCard = document.querySelectorAll('.card__info');
         item.addEventListener('click', function (){
             let tabId = item.getAttribute('data-tab');
             let curentTab = document.querySelector(tabId);
-    
+
             tabsCard.forEach(function (item){
                 item.classList.remove('active')
             });
@@ -63,9 +63,56 @@ const contentCard = document.querySelectorAll('.card__info');
 
 
 
+// Tabs graph categories
+
+const tabsCategories = document.querySelectorAll('.graph__tab');
+const contentCategories = document.querySelectorAll('.graph__table-wrap');
+
+tabsCategories.forEach(function (item){
+        item.addEventListener('click', function (){
+            let tabId = item.getAttribute('data-cat');
+            let curentTab = document.querySelector(tabId);
+            tabsCategories.forEach(function (item){
+                item.classList.remove('active')
+            });
+            contentCategories.forEach(function (item){
+                item.classList.remove('active')
+            });
+    
+            item.classList.add('active');
+    
+            curentTab.classList.add('active');
+        })
+    })
+    document.querySelector('.graph__tab').click();
 
 
+// Tabs graph day
+
+const tabsDay = document.querySelectorAll('.table__title-col');
+const contentDay = document.querySelectorAll('.table__col');
 
 
+tabsDay.forEach(function (item){
+        item.addEventListener('click', function (){
+            let tabId = item.getAttribute('data-grph');
+            let curentTab = document.querySelectorAll(tabId);
+
+            tabsDay.forEach(function (item){
+                item.classList.remove('active')
+            });
+            contentDay.forEach(function (item){
+                item.classList.remove('active')
+            });
+    
+            item.classList.add('active');
+            
+            curentTab.forEach(function(item){
+                item.classList.add('active');
+            })
+            
+        })
+    })
+    document.querySelector('.table__title-col').click();
 
 

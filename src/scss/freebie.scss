@@ -1,0 +1,143 @@
+@import './assets/mixins';
+@import './assets/vars';
+
+.freebie{
+    background-image: url('./../img/freebie/freebie-bg.png');
+    background-size:cover;
+    clip-path: polygon(0 1%, 100% 0%, 100% 98%, 0% 100%);
+    transform: translateY(-48px);
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "";
+        background-color: $acentFuturistColor;
+        width: 100%;
+        height: 20px;
+        top: 8px;
+        left: 0;
+        clip-path: polygon(0 0, 100% 25%, 100% 28%, 0 65%);
+        transform: rotate(-5deg)
+    }
+    &__inner{
+        @include flex (flex,column,center,center);
+        padding-top: 95px;
+    }
+    &__title{
+        @include text(32px,700,38px,$textColor);
+        text-align: center;
+        text-transform: uppercase;
+        max-width: 285px;
+    }
+    &__info{
+        margin-top: 125px;
+    }
+    &__subtitle{
+        @include text(32px,700,38px,$textColor);
+        text-transform: uppercase;
+        margin-left: 60px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            background-image: url('./../img/freebie/queshions.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 90px;
+            height: 140px;
+            top: -90px;
+            left: -50px;
+        }
+    }
+    &__info-wrap{
+        margin-top: 45px;
+
+        
+    }
+    &__info-text{
+        margin-left: 45px;
+        margin-top: 30px;
+        max-width: 253px;
+        @include text(16px,400,19px,$textColor);
+        font-family: 'Calibri';
+        position: relative;
+        &::before{
+            position: absolute;
+            content: " ";
+            background-color: $acentOlimpicColor;
+            width: 8px;
+            height: 8px;
+            top: 5px;
+            left: -20px;
+            border-radius: 50%;
+        }
+    }
+    &__item:nth-child(4){
+        margin-top: 40px;
+    }
+
+    &__item{
+        margin: 80px 0;
+        @include flex (flex,column,center,flex-start);
+        max-width: 256px;
+    }
+    &__item-title{
+        @include text(32px,700,38px,$textColor);
+    }
+    &__item-subtitle{
+        @include text(24px,400,28px,$textColor);
+        margin-top: 6px;
+        display: block; 
+    }
+    &__form{
+        @include flex (flex,column,center,center);
+    }
+    &__label{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            width: 32px;
+            height: 32px;
+            top: 75px;
+            left: -15px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('./../img/freebie/before-name.svg');
+        }
+    }
+    &__label:nth-child(2){
+        &::before{
+            background-image: url('./../img/freebie/before-tell.png');
+        }
+    }
+    &__label:nth-child(3){
+        &::before{
+            background-image: url('./../img/freebie/before-email.svg');
+        }
+    }
+    &__input{
+        background-color: inherit;
+        width: 233px;
+        height: 25px;
+        border-bottom: 1px solid $textColor;
+        margin-top: 67px;
+        margin-left: 35px;
+        padding: 5px 0;
+        @include text(16px,400,19px,$textColor);
+        &::placeholder{
+            @include text(16px,400,19px,$textColor);
+            font-family: 'Calibri';
+        }
+    }
+
+    &__btn{
+        margin-top: 70px;
+        margin-bottom: 40px;
+        width: 227px;
+        height: 55px;
+        border-radius: 8px;
+        @include text(18px,400,20px,$textColor);
+        font-family: 'Calibri';
+    }
+    
+}
