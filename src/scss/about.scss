@@ -1,0 +1,66 @@
+@import './assets/mixins';
+@import './assets/vars';
+
+
+.about{
+    background-image: url('./../img/about/bg-about.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 4%, 100% 0%, 100% 98%, 0% 100%);
+    overflow: hidden;
+    // margin-top: -100px;
+
+    &__inner{
+        padding-top: 100px;
+        @include flex (flex,column,center,center);
+    }
+
+    &__top{
+        @include flex (flex,column,center,center);
+    }
+    &__title-wrap{
+        @include flex (flex,column,center,center);
+    }
+    &__title{
+        @include text(32px,700,38px,$textColorSecondary);
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__subtitle{
+        display: block;
+        @include text(18px,400,21px,$textColorSecondary);
+        font-family: "Calibri";
+        max-width: 175px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    &__slider-wrap{
+        margin-top: 55px;
+        width: 291px;
+    }
+    &__slider{
+        border: 2px solid;
+        overflow: hidden;
+        width: 100%;
+    }
+    &__slider-line{
+        transition: .5s;
+        display: flex;
+        position: relative;
+        // overflow: hidden;
+    }
+
+    &__slider-img__wrap{
+        transform: skewX(-12deg);
+        border-radius: 8px;
+        margin: 0 10px 0 0;
+        min-width: 220px;
+        overflow: hidden;
+    }
+    &__slider-img{
+        width: 240px;
+        height: auto;
+        transform: skewX(12deg);
+        object-fit: cover;
+    }
+}

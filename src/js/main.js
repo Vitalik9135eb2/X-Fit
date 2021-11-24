@@ -116,3 +116,41 @@ tabsDay.forEach(function (item){
     document.querySelector('.table__title-col').click();
 
 
+
+
+// Slider
+
+const sliderTrack = document.querySelector('.about__slider-line');
+let offset = 0;
+let courent = document.querySelector('.about__slider-counter__numb');
+
+
+document.querySelector('.about__slider-counter__all').innerHTML = document.querySelectorAll('.about__slider-img__wrap').length
+
+
+let q = 1
+
+
+
+document.querySelector('.btn--next').addEventListener('click', function (){
+    offset = offset + 256;
+    sliderTrack.style.left = -offset + "px";
+    q++
+    courent.innerHTML = q
+
+    if (q < 10){courent.innerHTML = "0" + q}
+    
+});
+
+
+document.querySelector('.btn--prev').addEventListener('click', function(){
+    offset = offset - 256;
+    sliderTrack.style.left = -offset + "px";
+    q--
+    courent.innerHTML = q
+    if (q < 10){courent.innerHTML = "0" + q}
+
+    // if(offset <= 0) {offset = 256;}
+});
+
+
