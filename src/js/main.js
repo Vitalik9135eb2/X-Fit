@@ -82,8 +82,9 @@ tabsCategories.forEach(function (item){
             item.classList.add('active');
     
             curentTab.classList.add('active');
-        })
-    })
+            
+        });
+    });
     document.querySelector('.graph__tab').click();
 
 
@@ -123,30 +124,41 @@ tabsDay.forEach(function (item){
 const sliderTrack = document.querySelector('.about__slider-line');
 let offset = 0;
 let courent = document.querySelector('.about__slider-counter__numb');
+let courentItem = document.querySelectorAll('.about__slider-img').length;
 
-
-document.querySelector('.about__slider-counter__all').innerHTML = document.querySelectorAll('.about__slider-img__wrap').length
+document.querySelector('.about__slider-counter__all').innerHTML = courentItem
 
 
 let q = 1
 
 
 
-document.querySelector('.btn--next').addEventListener('click', function (){
-    offset = offset + 256;
+document.querySelector('.about__btn--next').addEventListener('click', function (){
+    let step = courentItem * 280;
+    if (offset >= step){
+        offset = 0;
+        q = 0
+    }
     sliderTrack.style.left = -offset + "px";
     q++
     courent.innerHTML = q
-
     if (q < 10){courent.innerHTML = "0" + q}
-    
 });
 
 
-document.querySelector('.btn--prev').addEventListener('click', function(){
-    offset = offset - 256;
+document.querySelector('.about__btn--prev').addEventListener('click', function(){
+    let step = courentItem * 280;
+    offset = offset - 280;
+
+    if (offset <= 0){
+        offset = 0;
+        
+    }
     sliderTrack.style.left = -offset + "px";
     q--
+    if(q<1){q = 
+        
+        1}
     courent.innerHTML = q
     if (q < 10){courent.innerHTML = "0" + q}
 

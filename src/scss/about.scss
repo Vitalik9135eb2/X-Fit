@@ -6,9 +6,6 @@
     background-image: url('./../img/about/bg-about.png');
     background-repeat: no-repeat;
     background-size: cover;
-    clip-path: polygon(0 4%, 100% 0%, 100% 98%, 0% 100%);
-    overflow: hidden;
-    // margin-top: -100px;
 
     &__inner{
         padding-top: 100px;
@@ -36,31 +33,139 @@
     }
     &__slider-wrap{
         margin-top: 55px;
-        width: 291px;
+        width: 210px;
+        transform: translateX(-6px);
+        position: relative;
     }
     &__slider{
-        border: 2px solid;
         overflow: hidden;
         width: 100%;
+        // clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
+        transform: skew(-12deg);
+        border-radius: 8px;
     }
     &__slider-line{
         transition: .5s;
         display: flex;
         position: relative;
-        // overflow: hidden;
+        border-radius: 8px;
     }
 
-    &__slider-img__wrap{
-        transform: skewX(-12deg);
-        border-radius: 8px;
-        margin: 0 10px 0 0;
-        min-width: 220px;
-        overflow: hidden;
-    }
     &__slider-img{
-        width: 240px;
-        height: auto;
-        transform: skewX(12deg);
+        width: 290px;
+        height: 200px;
+        // transform: skew(12deg);
+      // clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
         object-fit: cover;
     }
+    &__slider-btn{
+        position: absolute;
+        top: 90px;
+        background-color: transparent;
+    }
+    &__btn--prev{
+        left: -40px;
+    }
+    &__btn--next{
+        right: -40px;
+    }
+    &__slider-info{
+        margin-top: 20px;
+        @include flex (flex,column,center,center);
+    }
+    &__slider-counter__numb{
+        @include text(32px,500,38px,$acentFuturistColor);
+    }
+    &__slider-counter__all{
+        @include text(18px,500,38px,$textColorSecondary);
+        margin-left: 15px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '/';
+            color: inherit;
+            top: -7px;
+            left: -10px;
+        }
+    }
+    &__slider-text{
+        display: block;
+        @include text(18px,500,22px,$textColorSecondary);
+        font-family: 'Calibri';
+        text-align: center;
+    }
+
+
+    &__bottom{
+        margin-top: 130px;
+        @include flex (flex,column,center,center);
+    }
+    &__map-wrap{
+        transform: skew(-12deg);
+        border-radius:8px;
+        margin-top: 40px;
+        width: 260px;
+        height: 208px;  
+    }
+    &__map-wrap iframe{
+        width: 100%;
+        height: 100%;
+    }
+    &__content{
+        @include flex (flex,column,center,center);
+    }
+    &__content-title{
+        @include text(32px,500,38px,$acentFuturistColor);
+        margin-top: 25px;
+        text-transform: uppercase;
+    }
+
+    &__list{
+        margin-top: 20px;
+        margin-left: 70px;
+    }
+    &__list-item{
+        max-width: 202px;
+        margin-top: 20px;
+        @include text(18px,400,20px,$textColorSecondary);
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            background-image: url('./../img/about/map.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 25px;
+            height: 25px;
+            top: 0px;
+            left: -40px;
+        }
+        &:nth-child(2)::before{
+            background-image: url('./../img/about/tell.svg');
+        }
+        &:nth-child(3)::before{
+            background-image: url('./../img/about/clock.svg');
+            top: 5px;
+        }
+        &:nth-child(4)::before{
+            background-image: url('./../img/about/email.svg');
+        }
+        &:nth-child(3){
+            max-width: 160px;
+        }
+    }
+    &__social{
+        @include flex (flex,row,center,center);
+        margin: 30px 0 70px 0;
+    }
+    &__social-item{
+        width: 35px;
+        height: 30px;
+        margin-right: 15px;
+    }
+    &__social-img{
+        width: 100%;
+        height: 100%;
+    }
+    
 }
