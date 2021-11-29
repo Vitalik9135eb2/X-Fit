@@ -2,13 +2,11 @@
 @import './assets/vars';
 
 .card{
-    // background-image: url('./../img/card/card-bg.png');
-    // background-size: cover;
     background-color: #000;
     clip-path: polygon(0 3%, 100% 0%, 100% 98%, 0% 100%);
     margin-top: -25px;
-    height: 100%;
-    padding-bottom: 90px;
+    // height: 100%;
+    // padding-bottom: 300px;
     position: relative;
     &::before{
         position: absolute;
@@ -22,6 +20,7 @@
     }
     &__inner{
         @include flex(flex,column,center,center);
+        padding-bottom: 30px;
     }
 
     &__title{
@@ -70,6 +69,7 @@
         border-radius: 8px;
         width: 290px;
         @include flex(flex,column,center,center);
+        padding-bottom: 30px;
     }
     &__info-title{
         @include text (24px,300,28px,$textColor);
